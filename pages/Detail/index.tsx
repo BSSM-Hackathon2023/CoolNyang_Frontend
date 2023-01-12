@@ -1,12 +1,11 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Dimensions, ScrollView, Text, View } from 'react-native';
+import * as C from './style'
 import { WebView } from 'react-native-webview';
 
-const Detail = ({ navigation }: any) => {
+const Detail = () => {
     return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <Text onPress={() => navigation.navigate('Home')}>detail</Text>
-        </View>
+        <WebView source={{ uri: 'http://10.150.151.99:3000' }} />
     );
 };
 

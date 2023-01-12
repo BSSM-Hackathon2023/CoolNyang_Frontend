@@ -7,7 +7,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createContext, useEffect, useState } from 'react';
 import Detail from './pages/Detail';
 
-const Container = styled(R.View)`
+const Container = styled(R.SafeAreaView)`
   flex: 1;
   margin: 0;
   padding: 0;
@@ -58,7 +58,7 @@ export default function App() {
                   headerTitle: user.isLogin ? `${date.getFullYear()}년 ${date.getDate()}월 ${date.getDay()}일 ${week[date.getDay()]}` : '',
                   title: '수면 조절',
                   headerStyle: {
-                    backgroundColor: '#01001A',
+                    backgroundColor: '#00000b',
                   },
                   headerTintColor: '#ccc',
                   headerTitleAlign: 'center',
@@ -77,7 +77,7 @@ export default function App() {
                   headerTitle: `${date.getFullYear()}년 ${date.getDate()}월 ${date.getDay()}일 ${week[date.getDay()]}`,
                   title: '패턴 분석',
                   headerStyle: {
-                    backgroundColor: '#01001A',
+                    backgroundColor: '#00000b',
                   },
                   headerTintColor: '#ccc',
                   headerTitleAlign: 'center',

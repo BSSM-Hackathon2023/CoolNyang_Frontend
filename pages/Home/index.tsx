@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import * as R from 'react-native';
+import WebView from 'react-native-webview';
 import styled from 'styled-components';
 import { UserContext } from '../../App';
 
@@ -16,9 +17,7 @@ const Home = ({ navigation }: any) => {
     const user = useContext(UserContext);
 
     return (
-        <HomeView style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <HomeText onPress={() => navigation.navigate('Details')}>home</HomeText>
-        </HomeView>
+        <WebView source={{ uri: 'https://bssm.kro.kr' }} />
     );
 };
 
